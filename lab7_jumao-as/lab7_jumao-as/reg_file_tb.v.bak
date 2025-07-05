@@ -1,0 +1,92 @@
+`timescale 1ns / 1ps
+module reg_file_tb;
+
+   // Inputs
+    reg clock;
+    reg reset;
+    reg [4:0] read_reg1;
+    reg [4:0] read_reg2;
+    reg [4:0] write_reg;
+    reg [31:0] write_data;
+    reg write_enable;
+
+    // Outputs
+    wire [31:0] read_data1;
+    wire [31:0] read_data2;
+
+    // Instantiate the register file
+    register_file uut (
+        .clock(clock),
+        .reset(reset),
+        .read_reg1(read_reg1),
+        .read_reg2(read_reg2),
+        .write_reg(write_reg),
+        .write_data(write_data),
+        .write_enable(write_enable),
+        .read_data1(read_data1),
+        .read_data2(read_data2)
+    );
+
+    // Clock generation
+    always #5 clock = ~clock;
+
+    // Testbench
+    initial begin
+        // Initialize inputs
+        clock = 0;
+        reset = 1;
+        write_enable = 0;
+        write_reg = 5'b0;
+        write_data = 32'b0;
+        read_reg1 = 5'b0;
+        read_reg2 = 5'b0;
+
+        // Apply reset
+        #10 reset = 0;
+
+        // Test 1: Write to Register 1
+        write_enable = 1;
+        write_reg = 5'd1; // Write to register 1
+        write_data = 32'hAABBCCDD;
+        #10 write_enable = 0;
+
+        // Test 2: Write to Register 2
+        write_enable = 1;
+        write_reg = 5'd2; // Write to register 2
+        write_data = 32'h12345678;
+        #10 write_enable = 0;
+
+        // Test 3: Attempt to Write to Register Zero
+        write_enable = 1;
+        write_reg = 5'd0; // Attempt to write to register 0
+        write_data = 32'hDEADBEEF;
+        #10 write_enable = 0;
+
+        // Test 4: Read Register 1 and 2
+        read_reg1 = 5'd1;
+        read_reg2 = 5'd2;
+        #10;
+
+        // Test 5: Reset All Registers
+        reset = 1;
+        #10 reset = 0;
+
+        // Test 6: Simultaneous Read and Write
+        write_enable = 1;
+        write_reg = 5'd1;
+        write_data = 32'hFACEBEEF;
+        read_reg1 = 5'd1;
+        read_reg2 = 5'd2;
+        #10 write_enable = 0;
+
+        // End simulation
+        $finish;
+    end
+
+    // Monitor for debugging
+    initial begin
+        $monitor("Time: %0t | WriteReg: %d | WriteData: %h | WriteEnable: %b | ReadReg1: %d | ReadData1: %h | ReadReg2: %d | ReadData2: %h",
+                 $time, write_reg, write_data, write_enable, read_reg1, read_data1, read_reg2, read_data2);
+    end
+
+endmodule

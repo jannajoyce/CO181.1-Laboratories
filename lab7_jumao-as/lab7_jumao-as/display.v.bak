@@ -1,0 +1,23 @@
+
+module display (
+    input [2:0] sel,
+    input [31:0] pc,
+    input [31:0] instruction,
+    input [31:0] alu_a,
+    input [31:0] alu_b,
+    input [31:0] alu_out,
+    input [7:0] serial,
+    output reg [32:0] result
+);
+    always @(*) begin
+        case (sel)
+            3'b000: result = {1'b0, pc};           // Program Counter
+            3'b001: result = {1'b0, instruction};  // Instruction
+            3'b010: result = {1'b0, alu_a};        // ALU input A
+            3'b011: result = {1'b0, alu_b};        // ALU input B
+            3'b100: result = {1'b0, alu_out};      // ALU output
+            3'b101: result = {25'b0, serial};      // Serial output (extend to 33 bits)
+            default: result = 33'b0;
+        endcase
+    end
+endmodule

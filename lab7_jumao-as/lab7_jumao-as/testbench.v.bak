@@ -1,0 +1,80 @@
+`timescale 1ns/1ps
+
+module testbench;
+
+reg clock;
+reg reset;
+
+// Outputs to monitor from the processor
+    wire [31:0] pc_out;           // Program Counter
+    wire [31:0] instruction_out;  // Fetched instruction
+    wire [31:0] alu_a_out;        // ALU input A
+    wire [31:0] alu_b_out;        // ALU input B
+    wire [31:0] alu_out_internal; // ALU result
+    wire [7:0] serial_out;        // Serial output data
+    wire serial_wren_out;         // Serial write enable
+
+
+//Generate clock at 100 MHz
+//initial begin
+	//clock <= 1'b0;
+	//reset <= 1'b1;
+	//forever #10 clock <= ~clock;
+//end
+
+//Drop reset after 200 ns
+//always begin
+	//#200 reset <= 1'b0;
+//end
+	
+	
+//instantiate the processor  "DUT"
+processor uut(
+	.clock(clock),
+	.reset(reset),
+	
+	.serial_in(8'b0),
+	.serial_valid_in(1'b0), //active-high - we never have anything to read from the serial port
+	.serial_ready_in(1'b1), //active-high - we are always ready to print serial data
+	.serial_rden_out(), //active-high
+	.serial_out(serial_out),
+	.serial_rden_out(),           // Not used in this test
+	.serial_wren_out(serial_wren_out), //active-high
+	.pc_out(pc_out),              // Program Counter output
+   .instruction_out(instruction_out), // Fetched instruction
+   .alu_a_out(alu_a_out),        // ALU input A     .alu_b_out(alu_b_out),        // ALU input B
+   .alu_out_internal(alu_out_internal) // ALU result
+);
+
+// Clock generation
+    initial begin
+        clock = 0;
+        forever #5 clock = ~clock; // Toggle clock every 5 ns
+    end
+
+    // Reset logic
+    initial begin
+        reset = 1;
+        #20 reset = 0; // Release reset after 20 ns
+    end
+
+    // Monitor important signals
+    initial begin
+        $monitor("Time: %0t | PC: %h | Instr: %h | ALU A: %h | ALU B: %h | ALU Out: %h | Serial Out: %c | Serial WREN: %b",
+                 $time, pc_out, instruction_out, alu_a_out, alu_b_out, alu_out_internal, serial_out, serial_wren_out);
+    end
+
+    // Monitor serial writes
+    always @(posedge clock) begin
+        if (serial_wren_out) begin
+            $display("Time: %0t | Serial Write: %c (ASCII: %h)", $time, serial_out, serial_out);
+        end
+    end
+
+    // Simulation end condition
+    initial begin
+        #5000; // Simulate for 5000 ns
+        $stop; // Stop simulation
+    end
+
+endmodule

@@ -1,0 +1,76 @@
+module program_counter_tb();
+    // Inputs
+    reg clock, reset;
+    reg [31:0] pc_in;
+    
+    // Output
+    wire [31:0] pc_out;
+
+    // Instantiate the program_counter module
+    program_counter uut (
+        .clock(clock),
+        .reset(reset),
+        .pc_in(pc_in),
+        .pc_out(pc_out)
+    );
+
+    // Clock generation (5 ns period)
+    always #5 clock = ~clock;
+
+    // Test scenarios
+    initial begin
+         $display("\n--- Program Counter Testbench Start ---");
+
+        // Initialize inputs
+        clock = 0; reset = 1; pc_in = 32'h00000000;
+
+        // Test 1: Reset operation
+        #10 $display("Test 1: Applying Reset");
+        reset = 0;
+        #10 pc_in = 32'h00400004;
+        #10;
+
+        // Test 2: Normal PC updates
+        $display("Test 2: Normal PC Updates");
+        pc_in = 32'h00400008;
+        #10;
+        pc_in = 32'h0040000C;
+        #10;
+
+        // Test 3: Rapid changes
+        $display("Test 3: Rapid PC Input Changes");
+        pc_in = 32'h12345678;
+        #5;
+        pc_in = 32'h87654321;
+        #5;
+        pc_in = 32'hABCDEF01;
+        #10;
+
+        // Test 4: Reset during operation
+        $display("Test 4: Reset During Operation");
+        reset = 1;
+        #10;
+        reset = 0;
+        pc_in = 32'h00400010;
+        #10;
+
+        // Test 5: Edge case - max value
+        $display("Test 5: Max PC Value");
+        pc_in = 32'hFFFFFFFF;
+        #10;
+
+        // Test 6: Edge case - zero
+        $display("Test 6: Min PC Value (Zero)");
+        pc_in = 32'h00000000;
+        #10;
+
+        $display("--- Program Counter Testbench End ---\n");
+        $finish;
+    end
+	 
+	 initial begin
+        $monitor("Time: %0t | Reset: %b | PC_in: %h | PC_out: %h", 
+                  $time, reset, pc_in, pc_out);
+    end
+	 
+endmodule

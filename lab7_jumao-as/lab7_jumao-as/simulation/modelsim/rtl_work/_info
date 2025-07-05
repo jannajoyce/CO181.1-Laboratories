@@ -1,0 +1,340 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/simulation/modelsim
+vadder
+Z1 !s110 1751687160
+!i10b 1
+!s100 >i9A2m7V5^R41PT>5N:kT0
+Im30mo7am2I=Go^41W^H:R1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1751424880
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1751687159.000000
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as
+Z6 tCvgOpt 0
+valu
+R1
+!i10b 1
+!s100 `R1f4`917Fc3]6eJ;PIbD0
+IB^QiAFZ<ZYKW?l0=_F:c[2
+R2
+R0
+w1751638587
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v
+L0 11
+R3
+r1
+!s85 0
+31
+Z7 !s108 1751687160.000000
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v|
+!i113 1
+R4
+R5
+R6
+vasync_memory
+R1
+!i10b 1
+!s100 JQm04VOS_mLGJH^]i?^4K1
+IdXB4k2H4WA103Ajh^H3RB3
+R2
+R0
+w1751538458
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v
+L0 22
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v|
+!i113 1
+R4
+R5
+R6
+vcontrol
+R1
+!i10b 1
+!s100 ENSeXzDX<;dk<8KHFH7;G2
+I0TjfS8gX7;c5@^i>E9O:C3
+R2
+R0
+w1745136678
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v
+L0 3
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v|
+!i113 1
+R4
+R5
+R6
+vdata_memory
+R1
+!i10b 1
+!s100 hG8C2bI0Jf^2ziTY1of[33
+I]GbR5iJ52kSj]=L^USO:P3
+R2
+R0
+w1745142136
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v
+L0 26
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v|
+!i113 1
+R4
+R5
+R6
+vdisplay
+R1
+!i10b 1
+!s100 9o74ZM5TCC<Df__YkVk943
+ITeJPEKnOC@554na1Cz<Jk1
+R2
+R0
+w1751638775
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v|
+!i113 1
+R4
+R5
+R6
+vhexTo7seg
+R1
+!i10b 1
+!s100 ;dBY:EVY1^P^4W6[=QIkB2
+IDO6X2PYaoelVofI9BR6gP0
+R2
+R0
+w1747126201
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v|
+!i113 1
+R4
+R5
+R6
+nhex@to7seg
+vinst_rom
+R1
+!i10b 1
+!s100 ==M>PkNil`QLOjhP>>>6e1
+I:IV1z62eL<BSI1Goa^i4F1
+R2
+R0
+w1751553013
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v
+L0 14
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v|
+!i113 1
+R4
+R5
+R6
+vprocessor
+R1
+!i10b 1
+!s100 YE69AFbjfo[M7I@SjW4Q70
+Il9Ck^g[ajK8o8nzHlj=i?0
+R2
+R0
+w1751553138
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v
+L0 3
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v|
+!i113 1
+R4
+R5
+R6
+vprogram_counter
+R1
+!i10b 1
+!s100 4mDEbM1KTI=ZfoL_XP>5h0
+IcLSRK<nbLW3H54SYH]TRP0
+R2
+R0
+w1751539442
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v|
+!i113 1
+R4
+R5
+R6
+vreg_file
+R1
+!i10b 1
+!s100 C20ZoDFjSaNc^3KDgfK=P0
+I52I^lRl8a2k@C;j0YVAU12
+R2
+R0
+w1745141699
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v
+L0 77
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v|
+!i113 1
+R4
+R5
+R6
+vserial_buffer
+R1
+!i10b 1
+!s100 Sg0iFP1HeR]D@UA>P9HFl0
+I2^0]K8S5Mi2dWh2CF;S]93
+R2
+R0
+w1745136937
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v
+L0 16
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v|
+!i113 1
+R4
+R5
+R6
+vsign_extender
+R1
+!i10b 1
+!s100 ]lN>SiKo?jdVM<?8Z?d@U3
+IVeMoRaD66l`5Wd`dnUJ9m0
+R2
+R0
+w1745136948
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v|
+!i113 1
+R4
+R5
+R6
+vtestbench
+!s110 1751687194
+!i10b 1
+!s100 cQIbSjEf5:Id4[aD890<[1
+I3zFc9g^^JlOJf4H>dgNkK3
+R2
+R0
+w1751427691
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/testbench.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1751687194.000000
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/testbench.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/testbench.v|
+!i113 1
+o-work work
+R6
+vwrapper
+R1
+!i10b 1
+!s100 Xc<e1cWlfco?3<PnI3oU_3
+IUfl@jZQSbg4h:lg^eV:341
+R2
+R0
+w1751542737
+8C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v
+FC:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v
+L0 3
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as|C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v|
+!i113 1
+R4
+R5
+R6

@@ -1,0 +1,91 @@
+`timescale 1ns / 1ps
+module wrapper(
+	 input [9:0] SW,
+	 input [3:0] KEY,
+
+	 output [6:0] hex_display0, // 7-segment display for digit 0 (LSB)
+    output [6:0] hex_display1, // 7-segment display for digit 1
+    output [6:0] hex_display2, // 7-segment display for digit 2
+    output [6:0] hex_display3, // 7-segment display for digit 3
+    output [6:0] hex_display4, // 7-segment display for digit 4
+    output [6:0] hex_display5,
+	 output reg[3:0] led1,
+	 output reg[3:0] led2,
+	 output [32:0] modedf);
+
+    reg clock;
+    reg reset;
+	 
+	// Assuming KEY is an input, use always block to assign
+
+
+    // Outputs to monitor from the processor
+    wire [31:0] pc_out;           // Program Counter
+    wire [31:0] instruction_out;  // Fetched instruction
+    wire [31:0] alu_a_out;        // ALU input A
+    wire [31:0] alu_b_out;        // ALU input B
+    wire [31:0] alu_out_internal; // ALU result
+    wire [7:0] serial_out;        // Serial output data
+    wire serial_wren_out;         // Serial write enable
+
+    // Instantiate processor
+    processor uut (
+        .clock(KEY[0]),
+        .reset(KEY[1]),
+        .serial_in(8'b0),             // No serial input for this test
+        .serial_valid_in(1'b0),       // No valid input for this test
+        .serial_ready_in(1'b1),       // Serial is always ready to accept writes
+        .serial_out(serial_out),      // Serial output,
+		  .serial_rden_out(),
+        .serial_wren_out(serial_wren_out), // Serial write enable
+        .pc_out(pc_out),              // Program Counter output
+        .instruction_out(instruction_out), // Fetched instruction
+        .alu_a_out(alu_a_out),        // ALU input A
+        .alu_b_out(alu_b_out),        // ALU input B
+        .alu_out_internal(alu_out_internal) // ALU result
+    );
+	 
+	 
+
+
+	 wire [32:0] outputon;
+	 
+
+	 Output outshoww (SW[2:0],pc_out,instruction_out,alu_a_out,alu_b_out,alu_out_internal,serial_out,outputon);
+	 
+	 
+	 hexTo7Seg hex_display_inst0 (
+        .x(outputon[3:0]),     // Least significant nibble
+        .z(hex_display0)       // Output to 7-segment display
+    );
+
+    hexTo7Seg hex_display_inst1 (
+        .x(outputon[7:4]),     // Next nibble
+        .z(hex_display1)
+    );
+
+    hexTo7Seg hex_display_inst2 (
+        .x(outputon[11:8]),    // Next nibble
+        .z(hex_display2)
+    );
+
+    hexTo7Seg hex_display_inst3 (
+        .x(outputon[15:12]),   // Next nibble
+        .z(hex_display3)
+    );
+
+    hexTo7Seg hex_display_inst4 (
+        .x(outputon[19:16]),   // Next nibble
+        .z(hex_display4)
+    );
+
+    hexTo7Seg hex_display_inst5 (
+        .x(outputon[23:20]),   // Most significant nibble
+        .z(hex_display5)
+    );
+    always @* begin
+        led1 = outputon[27:24];
+        led2 = outputon[31:28];
+    end
+
+endmodule

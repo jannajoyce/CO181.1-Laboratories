@@ -1,0 +1,209 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do lab7_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:45:59 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v 
+# -- Compiling module async_memory
+# 
+# Top level modules:
+# 	async_memory
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v 
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v 
+# -- Compiling module hexTo7seg
+# 
+# Top level modules:
+# 	hexTo7seg
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v 
+# -- Compiling module inst_rom
+# 
+# Top level modules:
+# 	inst_rom
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v 
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v 
+# -- Compiling module reg_file
+# 
+# Top level modules:
+# 	reg_file
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v 
+# -- Compiling module serial_buffer
+# 
+# Top level modules:
+# 	serial_buffer
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v 
+# -- Compiling module sign_extender
+# 
+# Top level modules:
+# 	sign_extender
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v 
+# -- Compiling module wrapper
+# 
+# Top level modules:
+# 	wrapper
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:00 on Jul 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as" C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v 
+# -- Compiling module display
+# 
+# Top level modules:
+# 	display
+# End time: 11:46:00 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:46:34 on Jul 05,2025
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:46:34 on Jul 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbench
+# vsim -gui -l msim_transcript work.testbench 
+# Start time: 11:47:05 on Jul 05,2025
+# Loading work.testbench
+# Loading work.processor
+# Loading work.program_counter
+# Loading work.inst_rom
+# Loading work.adder
+# Loading work.control
+# Loading work.reg_file
+# Loading work.sign_extender
+# Loading work.alu
+# Loading work.data_memory
+# Loading work.async_memory
+# Loading work.serial_buffer
+add wave -position insertpoint sim:/testbench/*
+run
+run
+run
+# [205000 ns] PC: 003ffffc | Instruction: xxxxxxxx | A: xxxxxxxx | B: xxxxxxxx | ALU_OUT: 00000000
+# [215000 ns] PC: 00400000 | Instruction: 200a4000 | A: 00000000 | B: 00004000 | ALU_OUT: 00004000
+# [225000 ns] PC: 00400004 | Instruction: 000aa022 | A: 00000000 | B: 00004000 | ALU_OUT: ffffc000
+# [235000 ns] PC: 00400008 | Instruction: 028aa022 | A: ffffc000 | B: 00004000 | ALU_OUT: ffff8000
+# [245000 ns] PC: 0040000c | Instruction: 028aa022 | A: ffff8000 | B: 00004000 | ALU_OUT: ffff4000
+# [255000 ns] PC: 00400010 | Instruction: 028aa022 | A: ffff4000 | B: 00004000 | ALU_OUT: ffff0000
+# [265000 ns] PC: 00400014 | Instruction: 200a0048 | A: 00000000 | B: 00000048 | ALU_OUT: 00000048
+# [275000 ns] PC: 00400018 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c
+# [285000 ns] PC: 0040001c | Instruction: 200a0065 | A: 00000000 | B: 00000065 | ALU_OUT: 00000065
+# [285000 ns] Serial Output: H (0x48)
+# [295000 ns] PC: 00400020 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c
+run
+# [305000 ns] PC: 00400024 | Instruction: 200a006c | A: 00000000 | B: 0000006c | ALU_OUT: 0000006c
+# [305000 ns] Serial Output: e (0x65)
+# [315000 ns] PC: 00400028 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c
+# [325000 ns] PC: 0040002c | Instruction: 200a006c | A: 00000000 | B: 0000006c | ALU_OUT: 0000006c
+# [325000 ns] Serial Output: l (0x6c)
+# [335000 ns] PC: 00400030 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c
+# [345000 ns] PC: 00400034 | Instruction: 200a006f | A: 00000000 | B: 0000006f | ALU_OUT: 0000006f
+# [345000 ns] Serial Output: l (0x6c)
+# [355000 ns] PC: 00400038 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c
+# [365000 ns] PC: 0040003c | Instruction: 200a0020 | A: 00000000 | B: 00000020 | ALU_OUT: 00000020
+# [365000 ns] Serial Output: o (0x6f)
+# [375000 ns] PC: 00400040 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c
+# [385000 ns] PC: 00400044 | Instruction: 200a0057 | A: 00000000 | B: 00000057 | ALU_OUT: 00000057
+# [385000 ns] Serial Output:   (0x20)
+# [395000 ns] PC: 00400048 | Instruction: ae8a000c | A: ffff0000 | B: 0000000c | ALU_OUT: ffff000c

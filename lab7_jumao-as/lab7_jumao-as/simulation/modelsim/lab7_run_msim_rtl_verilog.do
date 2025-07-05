@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/adder.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/alu.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v}
+

@@ -1,0 +1,71 @@
+`timescale 1ns / 1ps
+
+module control_tb;
+    // Inputs
+    reg [31:0] instruction;
+    // Outputs
+    wire RegDst;
+    wire ALUSrc;
+    wire MemToReg;
+    wire RegWrite;
+    wire MemRead;
+    wire MemWrite;
+    wire [3:0] ALUOp;
+
+    // Instruction name string
+    reg [80*8:0] instr_name; // 80 characters to store instruction name
+
+    // Instantiate the control module
+    control uut (
+        .instruction(instruction),
+        .RegDst(RegDst),
+        .ALUSrc(ALUSrc),
+        .MemToReg(MemToReg),
+        .RegWrite(RegWrite),
+        .MemRead(MemRead),
+        .MemWrite(MemWrite),
+        .ALUOp(ALUOp)
+    );
+
+    // Monitor changes in inputs and outputs
+    initial begin
+        $monitor("Time: %0t | Instr: %b | RegDst=%b | ALUSrc=%b | MemToReg=%b | RegWrite=%b | MemRead=%b | MemWrite=%b | ALUOp=%b",
+                 $time, instruction, RegDst, ALUSrc, MemToReg, RegWrite, MemRead, MemWrite, ALUOp);
+    end
+
+    // Test Instructions
+    initial begin
+        // Test R-type (ADD)
+        instruction = 32'b00000000000000000000000000100000; // ADD
+        instr_name = "R-type (ADD)";
+        #10;
+
+        // Test R-type (SUB)
+        instruction = 32'b00000000000000000000000000100010; // SUB
+        instr_name = "R-type (SUB)";
+        #10;
+
+        // Test R-type (AND)
+        instruction = 32'b00000000000000000000000000100100; // AND
+        instr_name = "R-type (AND)";
+        #10;
+
+        // Test R-type (OR)
+        instruction = 32'b00000000000000000000000000100101; // OR
+        instr_name = "R-type (OR)";
+        #10;
+
+        // Test I-type (LW)
+        instruction = 32'b10001100000000000000000000000000; // LW
+        instr_name = "I-type (LW)";
+        #10;
+
+        // Test I-type (SW)
+        instruction = 32'b10101100000000000000000000000000; // SW
+        instr_name = "I-type (SW)";
+        #10;
+
+        // Stop simulation
+        $stop;
+    end
+endmodule
