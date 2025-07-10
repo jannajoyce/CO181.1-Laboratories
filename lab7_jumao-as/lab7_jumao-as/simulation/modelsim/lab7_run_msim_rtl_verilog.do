@@ -10,13 +10,11 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/async_memory.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/control.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/data_memory.v}
-vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/hexto7seg.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/inst_rom.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/mux2.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/processor.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/program_counter.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/reg_file.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/serial_buffer.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/sign_extender.v}
-vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/wrapper.v}
-vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as {C:/intelFPGA_lite/18.1/quartus/181.1/lab7_jumao-as/display.v}
 

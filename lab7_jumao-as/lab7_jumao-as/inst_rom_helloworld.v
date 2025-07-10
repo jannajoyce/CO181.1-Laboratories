@@ -106,7 +106,7 @@ module inst_rom_helloworld(
 );
    
 	 parameter ADDR_WIDTH = 5;
-    parameter MEMORY_FILE = "nbhelloworld.inst_rom.memh";
+    parameter INIT_PROGRAM = "nbhelloworld.inst_rom.memh";
     parameter DEFAULT_VALUE = 32'h00000000;
 	 
     // ROM memory declaration
@@ -121,9 +121,9 @@ module inst_rom_helloworld(
         end
         
         // Then try to load from memory file
-        if (MEMORY_FILE != "") begin
-            $readmemh(MEMORY_FILE, rom);
-            $display("ROM initialized from file: %s", MEMORY_FILE);
+        if (INIT_PROGRAM != "") begin
+            $readmemh(INIT_PROGRAM, rom);
+            $display("ROM initialized from file: %s", INIT_PROGRAM);
         end else begin
             $display("ROM initialized with default values");
         end

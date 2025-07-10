@@ -34,6 +34,13 @@ module processor (
     wire serial_wren_out_wire;
     wire serial_rden_out_wire;
 
+	     // Adder for PC + 4
+    adder PCAdder (
+        .a(pc_out),
+        .b(32'd4),
+        .sum(pc_next)
+    );
+	 
     // Program Counter
     program_counter PC (
         .clock(clock),
@@ -43,19 +50,24 @@ module processor (
     );
 
      //Instruction Memory
-    inst_rom_helloworld InstructionMemory (
+    inst_rom InstructionMemory (
         .clock(clock),
         .reset(reset),
         .addr_in(pc_out),
         .data_out(instruction_out)
     );
 	 
-    // Adder for PC + 4
-    adder PCAdder (
-        .a(pc_out),
-        .b(32'd4),
-        .sum(pc_next)
-    );
+	 
+	 wire [4:0] write_reg_mux_out;
+	 
+	 mux2 #(5) RegDst_Mux (
+    .in0(instruction_out[20:16]), // rt
+    .in1(instruction_out[15:11]), // rd
+    .select(RegDst),
+    .out(write_reg_mux_out)
+);
+
+	 
 
     // Control Unit
     control Control (
@@ -75,8 +87,9 @@ module processor (
         .reset(reset),
         .read_reg1(instruction_out[25:21]),  // rs
         .read_reg2(instruction_out[20:16]),  // rt
-        .write_reg(RegDst ? instruction_out[15:11] : instruction_out[20:16]), // rd or rt
-        .write_data(write_data),
+        //.write_reg(RegDst ? instruction_out[15:11] : instruction_out[20:16]), // rd or rt
+        .write_reg(write_reg_mux_out),
+		  .write_data(write_data),
         .write_enable(RegWrite),
         .read_data1(read_data1),
         .read_data2(read_data2)
@@ -87,13 +100,23 @@ module processor (
         .in(instruction_out[15:0]),
         .out(sign_ext_imm)
     );
+	 
+	 wire [31:0] alu_b_mux_out;
+	 
+	 mux2 #(32) ALUSrc_Mux (
+    .in0(read_data2),
+    .in1(sign_ext_imm),
+    .select(ALUSrc),
+    .out(alu_b_mux_out)
+	 );
 
     // ALU
     alu ALU (
         .Func_in(alu_op),
         .A_in(read_data1),
-        .B_in(ALUSrc ? sign_ext_imm : read_data2),
-        .O_out(alu_out),
+        //.B_in(ALUSrc ? sign_ext_imm : read_data2),
+        .B_in(alu_b_mux_out),
+		  .O_out(alu_out),
         .Branch_out(),
         .Jump_out()
     );
@@ -115,14 +138,25 @@ module processor (
         .serial_rden_out(serial_rden_out_wire),
         .serial_wren_out(serial_wren_out_wire)
     );
+	 
+	 wire [31:0] write_data_mux_out;
+	 
+	 mux2 #(32) MemToReg_Mux (
+    .in0(alu_out),
+    .in1(mem_data_out),
+    .select(MemToReg),
+    .out(write_data_mux_out)
+	 );
 
     // Connect outputs
     assign serial_out = serial_out_wire;
     assign serial_rden_out = serial_rden_out_wire;
     assign serial_wren_out = serial_wren_out_wire;
     assign alu_a_out = read_data1;
-    assign alu_b_out = ALUSrc ? sign_ext_imm : read_data2;
-    assign alu_out_output = alu_out;
-    assign write_data = MemToReg ? mem_data_out : alu_out;
+    //assign alu_b_out = ALUSrc ? sign_ext_imm : read_data2;
+    assign alu_b_out = alu_b_mux_out;
+	 assign alu_out_output = alu_out;
+    //assign write_data = MemToReg ? mem_data_out : alu_out;
+	 assign write_data = write_data_mux_out;
 
 endmodule
